@@ -14,7 +14,7 @@ namespace Forwarder.Controllers {
 
 		[HttpPost("/")]
 		public async Task<dynamic> Forward([FromBody] HttpRequestMessage request) {
-			Logger.Log(LogLevel.Information, $"URL: {request.RequestUri?.AbsoluteUri}");
+			Logger.Log(LogLevel.Information, $"{request.Method} {request.RequestUri?.AbsoluteUri}");
 			Logger.Log(LogLevel.Debug, $"Request: {JsonConvert.SerializeObject(request, new HttpRequestMessageConverter())}");
 			HttpResponseMessage response = null;
 			try {
