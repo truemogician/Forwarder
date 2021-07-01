@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <RootNamespace>Forwarder.Client.Flurl</RootNamespace>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>D:\Code\Visual Studio\Solutions\Forwarder\Forwarder.Client\Forwarder.Client.xml</DocumentationFile>
+    <NoWarn>1701;1702;1068</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Flurl" Version="3.0.2" />
+    <PackageReference Include="Flurl.Http" Version="3.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Forwarder.Converter\Forwarder.Converter.csproj" />
+  </ItemGroup>
+
+</Project>
