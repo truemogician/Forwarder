@@ -53,7 +53,7 @@ namespace Forwarder.Converter {
 			if (jObject.GetValue<HttpRequestHeaders, HttpRequestHeadersConverter>("headers", JTokenType.Object) is { } headers)
 				foreach ((string name, var value) in headers)
 					request.TryAddHeader(name, value);
-			if (jObject.GetValue<HttpContent, HttpContentConverter>("content", JTokenType.Bytes) is { } content)
+			if (jObject.GetValue<HttpContent, HttpContentConverter>("content", JTokenType.String) is { } content)
 				request.Content = content;
 			return request;
 		}

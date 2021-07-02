@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Forwarder.Client.Flurl", "F
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Forwarder.Converter", "Forwarder.Converter\Forwarder.Converter.csproj", "{904C908C-A15C-4962-B915-DF18A36ADF7F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Forwarder.Client.Test", "Forwarder.Client.Test\Forwarder.Client.Test.csproj", "{F83A7E27-3BE3-4B80-912A-3C96EF1FEB32}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Forwarder.Client.Test", "Forwarder.Client.Test\Forwarder.Client.Test.csproj", "{F83A7E27-3BE3-4B80-912A-3C96EF1FEB32}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Forwarder.Models", "Forwarder.Models\Forwarder.Models.csproj", "{EB9C89FF-E474-40BA-B12D-BC1C576114E9}"
 EndProject
