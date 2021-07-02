@@ -18,7 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Forwarder.Client\Forwarder.Client.Flurl.csproj" />
+    <ProjectReference Include="..\Forwarder.Client.Flurl\Forwarder.Client.Flurl.csproj" />
   </ItemGroup>
 
 </Project>

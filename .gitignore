@@ -6,8 +6,7 @@ PID
 /*
 !/Forwarder
 /Forwarder/.config
-!/Forwarder.Client
-!/Forwarder.Client.Test
+!/Forwarder.Client.*
 !/Forwarder.Converter
 !/.gitignore
 !/Forwarder.sln
