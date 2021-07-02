@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using Newtonsoft.Json;
@@ -36,8 +37,7 @@ namespace Forwarder.Converter {
 						headers[name] += $",{string.Join(',', values)}";
 					else
 						headers[name] = string.Join(',', values);
-			writer.WritePropertyName("headers");
-			writer.WriteRawValue(JsonConvert.SerializeObject(headers));
+			writer.WriteValueWithName("headers", headers);
 			if (request.Content is not null)
 				writer.WriteValueWithName<HttpContent, HttpContentConverter>("content", request.Content);
 			writer.WriteEndObject();
@@ -50,11 +50,14 @@ namespace Forwarder.Converter {
 				request.Method = method;
 			if (jObject.GetValue<Uri, UriConverter>("url", JTokenType.String) is { } url)
 				request.RequestUri = url;
-			if (jObject.GetValue<HttpRequestHeaders, HttpRequestHeadersConverter>("headers", JTokenType.Object) is { } headers)
-				foreach ((string name, var value) in headers)
-					request.TryAddHeader(name, value);
 			if (jObject.GetValue<HttpContent, HttpContentConverter>("content", JTokenType.String) is { } content)
 				request.Content = content;
+			if (jObject.GetValue<Dictionary<string, string>>("headers", JTokenType.Object) is { } headers)
+				foreach ((string name, string value) in headers) {
+					if (request.ContainsHeader(name))
+						request.TryRemoveHeader(name);
+					request.TryAddHeader(name, value);
+				}
 			return request;
 		}
 	}
