@@ -74,7 +74,10 @@ namespace Forwarder.Client.Flurl {
 				Content = content
 			};
 			request.Headers.Clear();
-			request.Content?.Headers.Clear();
+			if (request.Content is not null)
+				foreach ((string name, _) in request.Content.Headers)
+					if (Headers.Contains(name))
+						request.Content.Headers.Remove(name);
 			foreach ((string name, string value) in Headers)
 				request.TryAddHeader(name, value);
 			foreach ((string name, string value) in Client.Headers)
