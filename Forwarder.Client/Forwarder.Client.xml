@@ -1,244 +1,239 @@
 <?xml version="1.0"?>
-
 <doc>
-	<assembly>
-		<name>Forwarder.Client</name>
-	</assembly>
-	<members>
-		<member name="T:Forwarder.Client.FlurlExtensions">
-			<summary>
-			</summary>
-		</member>
-		<member
-			name="M:Forwarder.Client.FlurlExtensions.UseForwarder(Flurl.Http.IFlurlRequest,Forwarder.Client.ForwarderClient)">
-			<summary>
-			</summary>
-			<param name="request"></param>
-			<param name="forwarder"></param>
-			<returns></returns>
-		</member>
-		<member name="M:Forwarder.Client.FlurlExtensions.UseForwarder(Flurl.Url,Forwarder.Client.ForwarderClient)">
-			<summary>
-			</summary>
-			<param name="url"></param>
-			<param name="forwarder"></param>
-			<returns></returns>
-		</member>
-		<member name="M:Forwarder.Client.FlurlExtensions.UseForwarder(System.Uri,Forwarder.Client.ForwarderClient)">
-			<summary>
-			</summary>
-			<param name="url"></param>
-			<param name="forwarder"></param>
-			<returns></returns>
-		</member>
-		<member name="M:Forwarder.Client.FlurlExtensions.UseForwarder(System.String,Forwarder.Client.ForwarderClient)">
-			<summary>
-			</summary>
-			<param name="url"></param>
-			<param name="forwarder"></param>
-			<returns></returns>
-		</member>
-		<member name="M:Forwarder.Client.FlurlExtensions.UseForwarder(Flurl.Http.IFlurlRequest,System.String)">
-			<summary>
-			</summary>
-			<param name="request"></param>
-			<param name="forwarderBaseUrl"></param>
-			<returns></returns>
-		</member>
-		<member name="M:Forwarder.Client.FlurlExtensions.UseForwarder(Flurl.Url,System.String)">
-			<summary>
-			</summary>
-			<param name="url"></param>
-			<param name="forwarderBaseUrl"></param>
-			<returns></returns>
-		</member>
-		<member name="M:Forwarder.Client.FlurlExtensions.UseForwarder(System.Uri,System.String)">
-			<summary>
-			</summary>
-			<param name="url"></param>
-			<param name="forwarderBaseUrl"></param>
-			<returns></returns>
-		</member>
-		<member name="M:Forwarder.Client.FlurlExtensions.UseForwarder(System.String,System.String)">
-			<summary>
-			</summary>
-			<param name="url"></param>
-			<param name="forwarderBaseUrl"></param>
-			<returns></returns>
-		</member>
-		<member name="M:Forwarder.Client.FlurlExtensions.AppendPath(Flurl.Url,System.String)">
-			<summary>
-			</summary>
-			<param name="url"></param>
-			<param name="path"></param>
-			<returns></returns>
-		</member>
-		<member name="M:Forwarder.Client.FlurlExtensions.AppendPath(System.Uri,System.String)">
-			<summary>
-			</summary>
-			<param name="url"></param>
-			<param name="path"></param>
-			<returns></returns>
-		</member>
-		<member name="M:Forwarder.Client.FlurlExtensions.AppendPath(System.String,System.String)">
-			<summary>
-			</summary>
-			<param name="url"></param>
-			<param name="path"></param>
-			<returns></returns>
-		</member>
-		<member name="M:Forwarder.Client.FlurlExtensions.Match(Flurl.Http.FlurlCookie,Flurl.Url)">
-			<summary>
-
-			</summary>
-			<param name="cookie"></param>
-			<param name="url"></param>
-			<returns></returns>
-		</member>
-		<member name="T:Forwarder.Client.ForwarderClientOptions">
-			<summary>
-			</summary>
-		</member>
-		<member name="P:Forwarder.Client.ForwarderClientOptions.AutoContentLength">
-			<summary>
-			</summary>
-		</member>
-		<member name="P:Forwarder.Client.ForwarderClientOptions.IgnoreConflictingHeader">
-			<summary>
-			</summary>
-		</member>
-		<member name="T:Forwarder.Client.ForwarderClient">
-			<summary>
-			</summary>
-		</member>
-		<member name="M:Forwarder.Client.ForwarderClient.#ctor(System.String,Forwarder.Client.ForwarderClientOptions)">
-			<summary>
-			</summary>
-			<param name="baseUrl"></param>
-			<param name="options"></param>
-		</member>
-		<member name="P:Forwarder.Client.ForwarderClient.Options">
-			<summary>
-			</summary>
-		</member>
-		<member name="P:Forwarder.Client.ForwarderClient.BaseUrl">
-			<summary>
-			</summary>
-		</member>
-		<member name="P:Forwarder.Client.ForwarderClient.Headers">
-			<summary>
-			</summary>
-		</member>
-		<member name="P:Forwarder.Client.ForwarderClient.Cookies">
-			<summary>
-			</summary>
-		</member>
-		<member name="T:Forwarder.Client.ForwarderRequest">
-			<summary>
-			</summary>
-		</member>
-		<member name="M:Forwarder.Client.ForwarderRequest.#ctor(Flurl.Http.IFlurlRequest,Forwarder.Client.ForwarderClient)">
-			<summary>
-			</summary>
-			<param name="request"></param>
-			<param name="client"></param>
-		</member>
-		<member name="P:Forwarder.Client.ForwarderRequest.Client">
-			<summary>
-			</summary>
-		</member>
-		<member name="P:Forwarder.Client.ForwarderRequest.OriginalRequest">
-			<summary>
-			</summary>
-		</member>
-		<member name="P:Forwarder.Client.ForwarderRequest.Flurl#Http#IFlurlRequest#Client">
-			<inheritdoc />
-		</member>
-		<member name="P:Forwarder.Client.ForwarderRequest.Verb">
-			<inheritdoc />
-		</member>
-		<member name="P:Forwarder.Client.ForwarderRequest.Url">
-			<inheritdoc />
-		</member>
-		<member name="P:Forwarder.Client.ForwarderRequest.Settings">
-			<inheritdoc />
-		</member>
-		<member name="P:Forwarder.Client.ForwarderRequest.Headers">
-			<inheritdoc />
-		</member>
-		<member name="P:Forwarder.Client.ForwarderRequest.Cookies">
-			<inheritdoc />
-		</member>
-		<member name="P:Forwarder.Client.ForwarderRequest.CookieJar">
-			<inheritdoc />
-		</member>
-		<member
-			name="M:Forwarder.Client.ForwarderRequest.SendAsync(System.Net.Http.HttpMethod,System.Net.Http.HttpContent,System.Threading.CancellationToken,System.Net.Http.HttpCompletionOption)">
-			<inheritdoc />
-		</member>
-		<member name="T:Forwarder.Client.ForwarderResponse">
-			<summary>
-			</summary>
-		</member>
-		<member name="P:Forwarder.Client.ForwarderResponse.ForwardSuccess">
-			<summary>
-			</summary>
-		</member>
-		<member name="P:Forwarder.Client.ForwarderResponse.OriginalResponse">
-			<summary>
-			</summary>
-		</member>
-		<member name="P:Forwarder.Client.ForwarderResponse.TargetResponse">
-			<summary>
-			</summary>
-		</member>
-		<member name="P:Forwarder.Client.ForwarderResponse.Request">
-			<summary>
-			</summary>
-		</member>
-		<member name="P:Forwarder.Client.ForwarderResponse.TargetRequest">
-			<summary>
-			</summary>
-		</member>
-		<member name="P:Forwarder.Client.ForwarderResponse.Headers">
-			<inheritdoc />
-		</member>
-		<member name="P:Forwarder.Client.ForwarderResponse.Cookies">
-			<inheritdoc />
-		</member>
-		<member name="P:Forwarder.Client.ForwarderResponse.ResponseMessage">
-			<inheritdoc />
-		</member>
-		<member name="P:Forwarder.Client.ForwarderResponse.StatusCode">
-			<inheritdoc />
-		</member>
-		<member name="M:Forwarder.Client.ForwarderResponse.GetJsonAsync``1">
-			<inheritdoc />
-		</member>
-		<member name="M:Forwarder.Client.ForwarderResponse.GetJsonAsync">
-			<inheritdoc />
-		</member>
-		<member name="M:Forwarder.Client.ForwarderResponse.GetJsonListAsync">
-			<inheritdoc />
-		</member>
-		<member name="M:Forwarder.Client.ForwarderResponse.GetStringAsync">
-			<inheritdoc />
-		</member>
-		<member name="M:Forwarder.Client.ForwarderResponse.GetBytesAsync">
-			<inheritdoc />
-		</member>
-		<member name="M:Forwarder.Client.ForwarderResponse.GetStreamAsync">
-			<inheritdoc />
-		</member>
-		<member name="M:Forwarder.Client.ForwarderResponse.Dispose">
-			<inheritdoc />
-		</member>
-		<member
-			name="M:Forwarder.Client.ForwarderResponse.op_Explicit(Forwarder.Client.ForwarderResponse)~Flurl.Http.FlurlResponse">
-			<summary>
-			</summary>
-			<param name="forwarderResponse"></param>
-			<returns></returns>
-		</member>
-	</members>
+    <assembly>
+        <name>Forwarder.Client.Flurl</name>
+    </assembly>
+    <members>
+        <member name="T:Forwarder.Client.Flurl.FlurlExtensions">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Forwarder.Client.Flurl.FlurlExtensions.UseForwarder(Flurl.Http.IFlurlRequest,Forwarder.Client.Flurl.ForwarderClient)">
+            <summary>
+            </summary>
+            <param name="request"></param>
+            <param name="forwarder"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Forwarder.Client.Flurl.FlurlExtensions.UseForwarder(Flurl.Url,Forwarder.Client.Flurl.ForwarderClient)">
+            <summary>
+            </summary>
+            <param name="url"></param>
+            <param name="forwarder"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Forwarder.Client.Flurl.FlurlExtensions.UseForwarder(System.Uri,Forwarder.Client.Flurl.ForwarderClient)">
+            <summary>
+            </summary>
+            <param name="url"></param>
+            <param name="forwarder"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Forwarder.Client.Flurl.FlurlExtensions.UseForwarder(System.String,Forwarder.Client.Flurl.ForwarderClient)">
+            <summary>
+            </summary>
+            <param name="url"></param>
+            <param name="forwarder"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Forwarder.Client.Flurl.FlurlExtensions.UseForwarder(Flurl.Http.IFlurlRequest,System.String)">
+            <summary>
+            </summary>
+            <param name="request"></param>
+            <param name="forwarderBaseUrl"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Forwarder.Client.Flurl.FlurlExtensions.UseForwarder(Flurl.Url,System.String)">
+            <summary>
+            </summary>
+            <param name="url"></param>
+            <param name="forwarderBaseUrl"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Forwarder.Client.Flurl.FlurlExtensions.UseForwarder(System.Uri,System.String)">
+            <summary>
+            </summary>
+            <param name="url"></param>
+            <param name="forwarderBaseUrl"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Forwarder.Client.Flurl.FlurlExtensions.UseForwarder(System.String,System.String)">
+            <summary>
+            </summary>
+            <param name="url"></param>
+            <param name="forwarderBaseUrl"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Forwarder.Client.Flurl.FlurlExtensions.AppendPath(Flurl.Url,System.String)">
+            <summary>
+            </summary>
+            <param name="url"></param>
+            <param name="path"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Forwarder.Client.Flurl.FlurlExtensions.AppendPath(System.Uri,System.String)">
+            <summary>
+            </summary>
+            <param name="url"></param>
+            <param name="path"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Forwarder.Client.Flurl.FlurlExtensions.AppendPath(System.String,System.String)">
+            <summary>
+            </summary>
+            <param name="url"></param>
+            <param name="path"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Forwarder.Client.Flurl.FlurlExtensions.Match(Flurl.Http.FlurlCookie,Flurl.Url)">
+            <summary>
+            </summary>
+            <param name="cookie"></param>
+            <param name="url"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Forwarder.Client.Flurl.ForwarderClientOptions">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Forwarder.Client.Flurl.ForwarderClientOptions.AutoContentLength">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Forwarder.Client.Flurl.ForwarderClientOptions.IgnoreConflictingHeader">
+            <summary>
+            </summary>
+        </member>
+        <member name="T:Forwarder.Client.Flurl.ForwarderClient">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Forwarder.Client.Flurl.ForwarderClient.#ctor(System.String,Forwarder.Client.Flurl.ForwarderClientOptions)">
+            <summary>
+            </summary>
+            <param name="baseUrl"></param>
+            <param name="options"></param>
+        </member>
+        <member name="P:Forwarder.Client.Flurl.ForwarderClient.Options">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Forwarder.Client.Flurl.ForwarderClient.BaseUrl">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Forwarder.Client.Flurl.ForwarderClient.Headers">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Forwarder.Client.Flurl.ForwarderClient.Cookies">
+            <summary>
+            </summary>
+        </member>
+        <member name="T:Forwarder.Client.Flurl.ForwarderRequest">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Forwarder.Client.Flurl.ForwarderRequest.#ctor(Flurl.Http.IFlurlRequest,Forwarder.Client.Flurl.ForwarderClient)">
+            <summary>
+            </summary>
+            <param name="request"></param>
+            <param name="client"></param>
+        </member>
+        <member name="P:Forwarder.Client.Flurl.ForwarderRequest.Client">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Forwarder.Client.Flurl.ForwarderRequest.OriginalRequest">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Forwarder.Client.Flurl.ForwarderRequest.Flurl#Http#IFlurlRequest#Client">
+            <inheritdoc />
+        </member>
+        <member name="P:Forwarder.Client.Flurl.ForwarderRequest.Verb">
+            <inheritdoc />
+        </member>
+        <member name="P:Forwarder.Client.Flurl.ForwarderRequest.Url">
+            <inheritdoc />
+        </member>
+        <member name="P:Forwarder.Client.Flurl.ForwarderRequest.Settings">
+            <inheritdoc />
+        </member>
+        <member name="P:Forwarder.Client.Flurl.ForwarderRequest.Headers">
+            <inheritdoc />
+        </member>
+        <member name="P:Forwarder.Client.Flurl.ForwarderRequest.Cookies">
+            <inheritdoc />
+        </member>
+        <member name="P:Forwarder.Client.Flurl.ForwarderRequest.CookieJar">
+            <inheritdoc />
+        </member>
+        <member name="M:Forwarder.Client.Flurl.ForwarderRequest.SendAsync(System.Net.Http.HttpMethod,System.Net.Http.HttpContent,System.Threading.CancellationToken,System.Net.Http.HttpCompletionOption)">
+            <inheritdoc />
+        </member>
+        <member name="T:Forwarder.Client.Flurl.ForwarderResponse">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Forwarder.Client.Flurl.ForwarderResponse.ForwardSuccess">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Forwarder.Client.Flurl.ForwarderResponse.OriginalResponse">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Forwarder.Client.Flurl.ForwarderResponse.TargetResponse">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Forwarder.Client.Flurl.ForwarderResponse.Request">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Forwarder.Client.Flurl.ForwarderResponse.TargetRequest">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Forwarder.Client.Flurl.ForwarderResponse.Headers">
+            <inheritdoc />
+        </member>
+        <member name="P:Forwarder.Client.Flurl.ForwarderResponse.Cookies">
+            <inheritdoc />
+        </member>
+        <member name="P:Forwarder.Client.Flurl.ForwarderResponse.ResponseMessage">
+            <inheritdoc />
+        </member>
+        <member name="P:Forwarder.Client.Flurl.ForwarderResponse.StatusCode">
+            <inheritdoc />
+        </member>
+        <member name="M:Forwarder.Client.Flurl.ForwarderResponse.GetJsonAsync``1">
+            <inheritdoc />
+        </member>
+        <member name="M:Forwarder.Client.Flurl.ForwarderResponse.GetJsonAsync">
+            <inheritdoc />
+        </member>
+        <member name="M:Forwarder.Client.Flurl.ForwarderResponse.GetJsonListAsync">
+            <inheritdoc />
+        </member>
+        <member name="M:Forwarder.Client.Flurl.ForwarderResponse.GetStringAsync">
+            <inheritdoc />
+        </member>
+        <member name="M:Forwarder.Client.Flurl.ForwarderResponse.GetBytesAsync">
+            <inheritdoc />
+        </member>
+        <member name="M:Forwarder.Client.Flurl.ForwarderResponse.GetStreamAsync">
+            <inheritdoc />
+        </member>
+        <member name="M:Forwarder.Client.Flurl.ForwarderResponse.Dispose">
+            <inheritdoc />
+        </member>
+        <member name="M:Forwarder.Client.Flurl.ForwarderResponse.op_Explicit(Forwarder.Client.Flurl.ForwarderResponse)~Flurl.Http.FlurlResponse">
+            <summary>
+            </summary>
+            <param name="forwarderResponse"></param>
+            <returns></returns>
+        </member>
+    </members>
 </doc>

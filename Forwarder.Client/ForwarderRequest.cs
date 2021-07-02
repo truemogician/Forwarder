@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
 using System.Threading;
@@ -81,6 +82,9 @@ namespace Forwarder.Client.Flurl {
 					request.TryAddHeader(name, value);
 			//Cookies from request are already presented by Header
 			request.Headers.TryAddWithoutValidation("Cookie", Client.Cookies.Where(cookie => cookie.Match(Url)).Select(cookie => $"{cookie.Name}={cookie.Value}"));
+			var cookies = request.Headers.GetValues("Cookie").SelectMany(cookie => cookie.Split(',', ';'));
+			request.Headers.Remove("Cookie");
+			request.TryAddHeader("Cookie", string.Join(';', cookies));
 			if (Client.Options.AutoContentLength && request.Content is not null)
 				request.Content.Headers.ContentLength = (await request.Content.ReadAsStreamAsync(cancellationToken)).Length;
 			var response = await Client.BaseUrl
